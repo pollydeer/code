@@ -39,7 +39,7 @@ public class Count {
 	   try {
 		   file = new FileReader(filename);
 		   brin = new BufferedReader(file);
-		   Pattern p = Pattern.compile("[_a-zA-Z0-9]+");      //指定正则表达式的规则为至少匹配一个下划线、大小写英文字母或数字
+		   Pattern p = Pattern.compile("[_a-zA-Z]+");      //指定正则表达式的规则为至少匹配一个下划线、大小写英文字母
 		   Matcher m = null;
 		   while((s = brin.readLine()) != null) {   //分行文本非空时，将分行文本插入到sb中
 			   s = s.replaceAll("[^_a-zA-Z]"," ");     //此处认为数字不属于单词，且文件中的单词可含下划线
